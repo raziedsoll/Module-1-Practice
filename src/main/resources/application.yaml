@@ -1,3 +1,25 @@
 spring:
   application:
     name: Module-1-Practice
+server:
+  port: 8081
+kafka:
+  boostrapServer: localhost:9092
+  topicName: Message
+  singleMessageConsumerConfig:
+    groupId: singleMessageConsumer
+    autoOffsetReset: latest
+    enableAutoCommit: true
+    sessionTimeoutMs: 120000
+    maxPollRecords: 1
+  batchMessageConsumerConfig:
+    groupId: batchMessageConsumer
+    autoOffsetReset: latest
+    enableAutoCommit: false
+    sessionTimeoutMs: 120000
+    fetchMinBytes: 4000
+    fetchMaxWaitMs: 60000
+    requestTimeoutMs: 120000
+  messageProducerConfig:
+    acks: all
+    retries: 10
