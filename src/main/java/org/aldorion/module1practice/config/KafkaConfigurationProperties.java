@@ -13,8 +13,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @RequiredArgsConstructor
 public class KafkaConfigurationProperties {
 
-    // Boostrap сервер. Достаточно указать один адрес для доступа к кластеру.
-    final String boostrapServer;
+    // Bootstrap сервер. Достаточно указать один адрес для доступа к кластеру.
+    final String bootstrapServer;
 
     // Имя топика, с которым будут работать продюсер и консьюмеры.
     final String topicName;

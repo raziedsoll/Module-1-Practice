@@ -83,7 +83,7 @@ services:
     build: .
     image: module-1-practice:local
     environment:
-      KAFKA_BOOSTRAPSERVER: kafka-1:29092,kafka-2:29092,kafka-3:29092
+      KAFKA_BOOTSTRAPSERVER: kafka-1:29092,kafka-2:29092,kafka-3:29092
     deploy:
       replicas: 2
     stop_grace_period: 90s

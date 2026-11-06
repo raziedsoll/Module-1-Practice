@@ -36,7 +36,7 @@ public class MessageProducer {
     @PostConstruct
     private void init() {
         properties = new Properties();
-        properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaConfigurationProperties.getBoostrapServer());
+        properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaConfigurationProperties.getBootstrapServer());
         properties.put(ProducerConfig.ACKS_CONFIG, kafkaConfigurationProperties.getMessageProducerConfig().acks()); //all - для достижения At Least Once по требованию задания
         properties.put(ProducerConfig.RETRIES_CONFIG, kafkaConfigurationProperties.getMessageProducerConfig().retries()); //10 - количество ретраев отправки сообщения, при проблемах фиксации сообщения
         properties.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());

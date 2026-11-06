@@ -44,7 +44,7 @@ public class BatchMessageConsumer {
     @PostConstruct
     private void init() {
         properties = new Properties();
-        properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaConfigurationProperties.getBoostrapServer());
+        properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaConfigurationProperties.getBootstrapServer());
         properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, JacksonJsonDeserializer.class.getName());
         properties.put(JacksonJsonDeserializer.VALUE_DEFAULT_TYPE, Message.class.getName());
