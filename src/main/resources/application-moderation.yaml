@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: Module-2-Practice
+  main:
+    keep-alive: true
+    web-application-type: none
+  kafka:
+    bootstrap-servers: localhost:9092
+    streams:
+      application-id: message-moderation-v1

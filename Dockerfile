@@ -3,7 +3,8 @@ WORKDIR /build
 COPY .mvn .mvn
 COPY mvnw pom.xml ./
 COPY src src
-RUN chmod +x mvnw && ./mvnw -B -Dmaven.test.skip=true package
+ARG START_CLASS=org.aldorion.module1practice.Module1PracticeApplication
+RUN chmod +x mvnw && ./mvnw -B -Dstart-class="$START_CLASS" -Dmaven.test.skip=true package
 
 FROM eclipse-temurin:21-jre
 WORKDIR /app
