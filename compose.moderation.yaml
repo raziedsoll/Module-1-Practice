@@ -65,8 +65,3 @@ services:
         condition: service_completed_successfully
     environment:
       SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:29092
-      SPRING_KAFKA_STREAMS_STATE_DIR: /var/lib/moderation
-    volumes:
-      - zk-streams-data:/var/lib/moderation
-volumes:
-  zk-streams-data:

@@ -1,4 +1,4 @@
-package org.aldorion.module1practice.model;
+package org.aldorion.common.model;
 
 /**
  * Сообщение, которое передаётся через Kafka в формате JSON.
